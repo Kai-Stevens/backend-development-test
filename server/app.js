@@ -30,8 +30,12 @@ app.get("/beasts/random", (req, res) => {
 });
 
 app.get("/beasts/:id", (req, res) => {
-    const filtered = beasts.filter((beast) => beast.id == req.params.id);
-    res.send(filtered[0]);
+    if (0 <= req.params.id && req.params.id < beasts.length) {
+        const filtered = beasts.filter((beast) => beast.id == id);
+        res.send(filtered[0]);
+    } else {
+        res.status(404).send({error: "This is invalid"})
+    }
 });
 
 app.post("/beasts", (req, res) => {
