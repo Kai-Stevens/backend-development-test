@@ -34,11 +34,20 @@ app.get("/beasts/random", (req, res) => {
 });
 
 app.get("/beasts/:id", (req, res) => {
-    if (0 <= req.params.id && req.params.id < beasts.length) {
-        const filtered = beasts.filter((beast) => beast.id == id);
+    try {
+        const id = parseInt(req.params.id);
+
+        if (!id && id !==0) {
+            throw "Invalid input!";
+        } else if (id < 0 || id >= beasts.length) {
+            throw "No such beast!";
+        }
+
+        const filtered = beasts.filter(b => b.id == req.params.id);
         res.send(filtered[0]);
-    } else {
-        res.status(404).send({error: "This is invalid"})
+        
+    } catch(e) {
+        res.status(404).send({error: e});
     }
 });
 
