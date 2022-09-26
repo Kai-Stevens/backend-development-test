@@ -38,9 +38,13 @@ app.post("/beasts", (req, res) => {
     // grab the beast data
     const newBeast = req.body;
     // add it to the list of beasts
+    newBeast["id"] = beasts.length;
+
+    beasts.push(newBeast);
 
     // return a message saying it worked (if it hangs it's probably because you missed this part)
-    res.send(newBeast);
+    // generic code is 200
+    res.status(201).send(newBeast);
 });
 
 // Exports
