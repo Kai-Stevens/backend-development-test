@@ -1,10 +1,10 @@
 html, body {
-    height: 100%;
     margin: 0;
     font-family: 'Dancing Script', cursive;
 }
 
 body {
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,8 @@ h1 {
     list-style: none;
     color: sienna;
     font-size: 24px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -50,4 +50,5 @@ li{
 
 li:hover {
     background-color: burlywood;
+    font-size: 28px;
 }

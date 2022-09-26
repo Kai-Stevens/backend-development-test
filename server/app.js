@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 
 const beasts = require("./beasts");
+const logRoute = require("./route-logger");
 // Make a basic server
 const app = express();
 
@@ -10,6 +11,9 @@ const app = express();
 app.use(cors());
 // Tell Express to always read the body of POST requests
 app.use(express.json());
+
+// Add middleware to log routes
+app.use(logRoute);
 
 // Set up the server routes
 app.get("/", (request, response) => {
