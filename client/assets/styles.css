@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.unsplash.com/photo-1598025792246-0cd11f0bca47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+}
+
+h1 {
+    text-align: center;
+    color: sienna;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: sienna;
+    padding: 10px 60px 10px 60px;
+    background-color: antiquewhite;
+}
+
+#cage {
+    list-style: none;
+    color: sienna;
+    font-size: 24px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+li{
+    border-style: solid;
+    border-color: sienna;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+li:hover {
+    background-color: burlywood;
+}
