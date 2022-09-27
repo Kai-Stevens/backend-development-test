@@ -1,7 +1,9 @@
 {
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm install cors express",
+    "build-dev": "npm install -D nodemon"
   },
   "dependencies": {
     "cors": "^2.8.5",

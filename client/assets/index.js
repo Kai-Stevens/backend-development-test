@@ -20,13 +20,27 @@ const displayBeastData = async () => {
     for (let beast of beasts) {
         // create an html element
         let beastItem = document.createElement('li');
+        const link = document.createElement('a');
 
         // set content (use bracket notation)
-        beastItem.textContent = beast["name"];
+        link.textContent = beast["name"];
+        link.href = `beast.html?id=${beast["id"]}`;
 
+        // create a delete button
+        deleteBtn = document.createElement('button');
+        deleteBtn.addEventListener
         // append to cage
+        beastItem.appendChild(link);
         cage.append(beastItem);
     }
+}
+
+const setupButton = () => {
+    // create a delete button
+    deleteBtn = document.createElement('button');
+    deleteBtn.addEventListener('click', () => {
+        
+    })
 }
 
 displayBeastData();
